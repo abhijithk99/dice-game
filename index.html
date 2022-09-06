@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="./assets/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row game-area">
+            <div class="col-md-6 player1">
+                <h1>PLAYER 1</h1>
+                <div class="score-area-player1">
+                    <p>score : <span id="score1"></span></p>
+                </div>
+                <button class="btn-player1" onclick = "img_selector1()"> THROW DICE</button>
+            </div>
+            <div class="col-md-6 player2">
+                <h1>PLAYER 2</h1>
+                <div class="score-area-player2">
+                    <p>score : <span id="score2"></span></p>
+                </div>
+                <button class="btn-player2" onclick = "img_selector2()">THROW DICE</button>
+            </div>
+        </div>
+    </div>
+    <div class="img-area">
+        <img src="" alt="" >
+        <h1 id="result"></h1>
+    </div>
+    <div class="result">
+        <h1>player 1 won</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+</body>
+</html>
