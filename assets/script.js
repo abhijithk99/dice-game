@@ -4,6 +4,7 @@ var score1 = 0;
 var score2 = 0;
 currentScore1 = 0;
 currentScore2 = 0;
+var i = 0
 
  const img_array = [
     'assets/images/dice1.png',
@@ -14,6 +15,17 @@ currentScore2 = 0;
     'assets/images/dice6.png'
 ];
 
+function incrementValue(){
+ i++
+ if((i%2)==0){
+    img_selector2()
+}
+else{
+    img_selector1()
+}
+}
+
+
 
 function img_selector1() {  
 	const randomIndex = Math.floor(Math.random() * img_array.length); 
@@ -22,7 +34,8 @@ function img_selector1() {
     document.getElementById('score1').innerHTML = currentScore1.toString(); 
     currentScore1 += diceScore
     if(currentScore1 >= 25){
-        result1()
+        result()
+        reset()
     }
 }
 function img_selector2() {  
@@ -32,7 +45,8 @@ function img_selector2() {
     document.getElementById('score2').innerHTML = currentScore2.toString(); 
     currentScore2 += diceScore
     if(currentScore2 >= 25){
-        result2()
+        result("player 2 won")
+        reset()
     }
 }
 function result1(){
@@ -40,4 +54,13 @@ function result1(){
 }
 function result2(){
     document.getElementById('result').innerHTML = "player 2 won"; 
+}
+function reset(){
+    score1 = 0;
+    score2 = 0;
+    currentScore1 = 0;
+    currentScore2 = 0;
+    i = 0
+    document.getElementById('score1').innerHTML = 0;
+    document.getElementById('score2').innerHTML = 0;
 }

@@ -9,11 +9,10 @@ body{
 }
 .row{
     height: 100vh;
-    position: relative;
-    z-index: 2;
 }
 .player1{
     background-color: blue;
+
 }
 .player2{
     background-color: red;
@@ -22,11 +21,10 @@ body{
 .img-area{
     height: 200px;
     width: 300px;
-    position: relative;
-    z-index: 3;
-    margin: auto;
-    top: -60vh;
     text-align: center;
+    top: 200px;
+    margin: auto;
+    margin-top: 250px;
 }
 .img-area img{
     height: 200px;

@@ -13,24 +13,28 @@
     <div class="container-fluid">
         <div class="row game-area">
             <div class="col-md-6 player1">
+                <button class="btn-player1" onclick="incrementValue()"> THROW DICE</button>
+                <button class="btn-player1" onclick="reset()">RESET</button>
                 <h1>PLAYER 1</h1>
                 <div class="score-area-player1">
                     <p>score : <span id="score1"></span></p>
                 </div>
-                <button class="btn-player1" onclick = "img_selector1()"> THROW DICE</button>
-            </div>
-            <div class="col-md-6 player2">
+               
+
                 <h1>PLAYER 2</h1>
                 <div class="score-area-player2">
                     <p>score : <span id="score2"></span></p>
                 </div>
-                <button class="btn-player2" onclick = "img_selector2()">THROW DICE</button>
+                
+
+            </div>
+            <div class="col-md-6 player2">
+                <div class="img-area">
+                    <img src="" alt="" >
+                    <h1 id="result"></h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="img-area">
-        <img src="" alt="" >
-        <h1 id="result"></h1>
     </div>
     <div class="result">
         <h1>player 1 won</h1>
