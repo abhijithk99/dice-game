@@ -31,10 +31,10 @@ else{
 function img_selector1() {  
 	const randomIndex = Math.floor(Math.random() * img_array.length); 
     diceScore = randomIndex + 1
-	document.querySelector('img').src =img_array[randomIndex]; 
-    document.getElementById('score1').innerHTML = currentScore1.toString(); 
     currentScore1 += diceScore
-    if(currentScore1 >= 25){
+	document.querySelector('img').src =img_array[randomIndex]; 
+    document.getElementById('score1').innerHTML = currentScore1; 
+    if(currentScore1 > 25){
         alert("player 1 won")
       //  result1()
         reset()
@@ -44,13 +44,14 @@ function img_selector1() {
         newGame
     }
 }
+
 function img_selector2() {  
 	const randomIndex = Math.floor(Math.random() * img_array.length); 
     diceScore = randomIndex + 1
-	document.querySelector('img').src =img_array[randomIndex]; 
-    document.getElementById('score2').innerHTML = currentScore2.toString(); 
     currentScore2 += diceScore
-    if(currentScore2 >= 25){
+	document.querySelector('img').src =img_array[randomIndex]; 
+    document.getElementById('score2').innerHTML = currentScore2; 
+    if(currentScore2 > 25){
         alert("player 2 won") 
        // result2()
         reset()
@@ -75,7 +76,7 @@ function reset(){
     document.getElementById('score1').innerHTML = 0;
     document.getElementById('score2').innerHTML = 0; 
 }
-function newGame(){
+/*function newGame(){
     var alert = document.getElementById("alertbox");
     alert.style.display = "none"
     reset()
@@ -83,4 +84,4 @@ function newGame(){
 function resultAlert(){
     var alert = document.getElementById("alertbox");
     alert.style.display = "block"
-}
+}*/
